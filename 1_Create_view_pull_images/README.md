@@ -1,15 +1,17 @@
-### Creating, pulling and running Docker images
+# Creating, pulling and running Docker images
 
 ## Create a Dockerfile
 
 Create a file called `Dockerfile` with the following contents:
 
-`FROM ubuntu
+```
+FROM ubuntu
 LABEL maintainer="Bob Smith (Bob.Smith@gmail.ibm.com)"
 RUN apt-get update
 RUN apt-get install -y nginx
 CMD ["nginx", "-g", "daemon off;"]
-EXPOSE 80`
+EXPOSE 80
+```
 
 Our starting point is from an ubuntu image. From there we add several layers to install and configure the latest version of nginx with `RUN`. `CMD` allows us to specify the default command when the container is started. In this case, this will run the nginx executable. Finally, we specify that we want to `EXPOSE` port 80 so that our nginx application can be accessed outside the container. Remember to change the `LABEL` line to use your own name and Email.
 
