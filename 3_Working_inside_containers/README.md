@@ -80,8 +80,10 @@ Let's see what list items we have in the `work` list:
 
 `select * from list_items where list_id=2`
 
-Since you now know how to run Docker containers and the you're actually doing this workshop now, lets update the `complete` status for items 8 and 9 in the list:
+Since you now know how to create a Docker container from a Dockerfile and you know how to run a Docker container, lets update the `complete` status for items 8 and 9 in the list:
 
 `update list_items set complete='Y' where id=8 or id=9;`
 
-If we now look at the state of the list_items in the `work` list we can see that list_items 8 and 9 are now marked as complete
+If we now look at the state of the list_items in the `work` list we can see that list_items 8 and 9 are now marked as complete. 
+
+Congratulations! You now know how to start an interactive shell within a running container, copy data inside a container and make changes inside a container. Continue on to the next exercise to learn how to persist data with containers.   
