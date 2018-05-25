@@ -8,7 +8,7 @@ Depending on the internet speed, it should take no more than a couple of mintues
 
 `docker run --name mysql -d mysql/mysql-server`
 
-As before, `-d` tells Dcoker to run the container in the background in detached mode and the `--name` flag allows us to label our container with a name we can use to reference it rather than using the random container Id.
+As before, `-d` tells Docker to run the container in the background in detached mode and the `--name` flag allows us to label our container with a name we can use to reference it rather than using the random container Id.
 
 ## View container logs
 
@@ -80,7 +80,7 @@ Let's see what list items we have in the `work` list:
 
 `select * from list_items where list_id=2`
 
-Since you now know how to create a Docker container from a Dockerfile and you know how to run a Docker container, lets update the `complete` status for items 8 and 9 in the list:
+Since you now know how to create a Docker image from a Dockerfile and you know how to run a Docker container, lets update the `complete` status for items 8 and 9 in the list:
 
 `update list_items set complete='Y' where id=8 or id=9;`
 
