@@ -37,7 +37,7 @@ INSERT INTO list_items (list_id, task) VALUES(1, 'Coffee');
 INSERT INTO list_items (list_id, task) VALUES(1, 'Bread');
 
 INSERT INTO list_items (list_id, task) VALUES(2, 'Reply to my managers E-mail');
-INSERT INTO list_items (list_id, task) VALUES(2, 'Submit code for this workshop');
+INSERT INTO list_items (list_id, task) VALUES(2, 'Learn how to create a Docker image');
 INSERT INTO list_items (list_id, task) VALUES(2, 'Learn how to run Docker containers');
 INSERT INTO list_items (list_id, task) VALUES(2, 'Install security patches');
 
