@@ -3,19 +3,16 @@
 In the last exercise, we learnt how to update our MySQL database. This is great as we didn't have to worry about setting up MySQL however, if our container were to go down, we would lose all the changes we made. The data lost would have been trivial as we made minor changes but with real applications, this would be unacceptable. Let's list the steps we took to setup our MySQL container:
 
 1. Run the container from the image
-2. Check the logs to get the temporary password
-3. Login to MySQL within the container to change the temporary password
-4. Exit the container
-5. Copy the schema into /tmp directory in the container
-6. Login to MySQL within the container
-7. Load the schema into MySQL
-8. Make our changes
+2. Copy the schema into /tmp directory in the container
+3. Login to MySQL within the container
+4. Load the schema into MySQL
+5. Make our changes
 
-Looking at the steps in the list, as a developer, the only changes we're interested in are steps 6-8. The first 5 steps are all boring configuration steps. Wouldn't it be great if our Docker image allowed us to skip the first 5 steps? Well good news... it can!
+Looking at the steps in the list, as a developer, we're really only interested in making changes to the database. Steps 2-4 are boring configuration steps that could be automated. Wouldn't it be great if our Docker image allowed us to skip these steps? Well good news... it can!
 
 ## Commit a new image
 
-To create a snapshot from our container, we need to get it at a good starting point for re-use. As we have already completed steps 1-5, we are all set to commit changes from our running MySQL container:
+To create a snapshot from our container, we need to get it at a good starting point for re-use. As we have already loaded the schema into MySQL and made are changes, we are all set to commit changes from our running MySQL container:
 
 `docker commit mysql your-username/mysql-server`
 
@@ -99,5 +96,5 @@ With some luck, todo should be there! We didn't have to run our schema. Let's no
 
 You should see that for ids 8 and 9, we have `Y` in the complete column.
 
-Congratulations! You now know how to mount volumes into a container to persist data and commit changes from a container to create a new image. Continue on to the next exercise to learn how to use the IBM container service.
+Congratulations! You now know how to mount volumes into a container to persist data and commit changes from a container to create a new image. Continue on to the [next exercise](https://github.com/mofsal/containers101/tree/master/5_Working_with_container_registry) to learn how to use the IBM container service.
 
