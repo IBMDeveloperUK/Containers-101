@@ -39,3 +39,5 @@ To start our nginx container again, you can run the following command:
 `docker start mynginx`
 
 As before the application will be available at `localhost:8081`.
+
+Congratulations, you now know how to create a container from a Docker image, start and stop containers and to monitor the state of all your containers! Continue on to the [next exercise](https://github.com/mofsal/containers101/tree/master/3_Working_inside_containers) to learn how to start working inside containers.
