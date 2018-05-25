@@ -20,5 +20,6 @@ For the last part of tthe workshop, we will be using IBM Container Registry. To 
 
 1. Go to [this docs link](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started) and follow the short instructions to download and install the CLI.
 
-2. Install the Container Registry plug-in.
+2. Install the Container Registry plug-in:
+
 `bx plugin install container-registry -r Bluemix`
