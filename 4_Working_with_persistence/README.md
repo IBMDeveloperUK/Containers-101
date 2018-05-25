@@ -94,6 +94,7 @@ As before, we supply the password `password`. Let's list the databases to see if
 With some luck, todo should be there! We didn't have to run our schema. Let's now verify that our changes to the database have persisted:
 
 `use todo;`
+
 `select * from list_items where list_id=2;`
 
 You should see that for ids 8 and 9, we have `Y` in the complete column.
