@@ -66,4 +66,4 @@ Since you now know how to create a Docker image from a Dockerfile and you know h
 
 If we now look at the state of the list_items in the `work` list we can see that list_items 8 and 9 are now marked as complete. To exit MySQL and the container, type the command `exit` twice (The first time should responde with "Bye" and the second with "exit").
 
-Congratulations! You now know how to start an interactive shell within a running container, copy data inside a container and make changes inside a container. Continue on to the next exercise to learn how to persist data with containers.   
+Congratulations! You now know how to start an interactive shell within a running container, copy data inside a container and make changes inside a container. Continue on to the [next exercise](https://github.com/mofsal/containers101/tree/master/4_Working_with_persistence) to learn how to persist data with containers.   
