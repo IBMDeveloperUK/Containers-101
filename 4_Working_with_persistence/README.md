@@ -4,9 +4,10 @@ In the last exercise, we learnt how to update our MySQL database. This is great 
 
 1. Run the container from the image
 2. Copy the schema into /tmp directory in the container
-3. Login to MySQL within the container
-4. Load the schema into MySQL
-5. Make our changes
+3. Login to the container
+4. Load the schema from /tmp into MySQL
+5. Login to MySQL
+6. Make our changes
 
 Looking at the steps in the list, as a developer, we're really only interested in making changes to the database. Steps 2-4 are boring configuration steps that could be automated. Wouldn't it be great if our Docker image allowed us to skip these steps? Well good news... it can!
 
