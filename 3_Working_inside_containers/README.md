@@ -78,7 +78,7 @@ Let's see what we have in the `list` table:
 
 Let's see what list items we have in the `work` list:
 
-`select * from list_items where list_id=2`
+`select * from list_items where list_id=2;`
 
 Since you now know how to create a Docker image from a Dockerfile and you know how to run a Docker container, lets update the `complete` status for items 8 and 9 in the list:
 
