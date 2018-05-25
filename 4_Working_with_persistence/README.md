@@ -45,7 +45,9 @@ Uh-oh! The todo database isn't there!
 As containers are ephemeral, we will not have the data in the data directory saved from the first container as this is exposed as a volume by default in Docker and is decoupled from the container (See the [Dockerfile](https://github.com/docker-library/mysql/blob/fc3e856313423dc2d6a8d74cfd6b678582090fc7/8.0/Dockerfile#L65)). We will need to run the schema as before:
 
 `exit`
+
 `docker exec -it mysql-persist bash`
+
 `mysql -u root -p < /tmp/todo.sql`
 
 As we committed the MySQL image after we had initialised the database with the environment variable, the password should still be `password`. Now we can log into the MySQL instance:
