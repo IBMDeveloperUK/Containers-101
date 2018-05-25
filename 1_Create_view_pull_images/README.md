@@ -1,4 +1,4 @@
-# Creating, pulling and running Docker images
+# Exercise 1: Creating, pulling and running Docker images
 
 ## Create a Dockerfile
 

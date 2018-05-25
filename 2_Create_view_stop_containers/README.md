@@ -1,4 +1,4 @@
-# Creating, viewing and stopping containers
+# Exercise 2: Creating, viewing and stopping containers
 
 ## Create a container
 
