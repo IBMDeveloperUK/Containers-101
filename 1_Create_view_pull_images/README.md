@@ -6,7 +6,7 @@ Create a file called `Dockerfile` with the following contents:
 
 ```
 FROM ubuntu
-LABEL maintainer="Bob Smith (Bob.Smith@gmail.ibm.com)"
+LABEL maintainer="Bob Smith (Bob.Smith@gmail.com)"
 RUN apt-get update
 RUN apt-get install -y nginx
 CMD ["nginx", "-g", "daemon off;"]
