@@ -29,3 +29,11 @@ For the last part of tthe workshop, we will be using IBM Container Registry. To 
 2. Install the Container Registry plug-in:
 
 `bx plugin install container-registry -r Bluemix`
+
+## Hands-on workshop
+
+Now you're ready to go!
+
+After completing the workshops, you will have experience with creating a Docker image from a Docker file, managing Docker containers (running, stopping, removing, viewing), working inside Docker containers, pushing and pulling Docker images to and from registries and working with persistent data.
+
+To begin, let's start of with the [first exercise](./1_Create_view_pull_images) where you will create your first Docker image! You will also learn how to pull other existing Docker images from DockerHub and inspect the history of image.
