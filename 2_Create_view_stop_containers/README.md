@@ -2,7 +2,7 @@
 
 ## Create a container
 
-Up until this point, you have only created a Docker image. You haven't actually run the desired application in its container form. To create a container from the custom built nginx image we made in [workshop 1](https://github.com/mofsal/containers101/tree/master/1_Create_view_pull_images), run the following command:
+Up until this point, you have only created a Docker image. You haven't actually run the desired application in its container form. To create a container from the custom built nginx image we made in [workshop 1](../1_Create_view_pull_images), run the following command:
 
 `docker run -d -p 8081:80 --name webserver mynginx`
 
@@ -40,4 +40,4 @@ To start our nginx container again, you can run the following command:
 
 As before the application will be available at `localhost:8081`.
 
-Congratulations, you now know how to create a container from a Docker image, start and stop containers and to monitor the state of all your containers! Continue on to the [next exercise](https://github.com/mofsal/containers101/tree/master/3_Working_inside_containers) to learn how to start working inside containers.
+Congratulations, you now know how to create a container from a Docker image, start and stop containers and to monitor the state of all your containers! Continue on to the [next exercise](../3_Working_inside_containers) to learn how to start working inside containers.
