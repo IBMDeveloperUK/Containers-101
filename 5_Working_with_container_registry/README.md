@@ -1,6 +1,6 @@
 # Working with IBM Cloud Container Registy
 
-So we have created our amazing database, we now want to push it to our private registry. In real agile development, a push to a private registry would trigger a build to run a test suite in a CI/CD pipeline. For this we will be using IBM Container Registry. If you have not created an IBM Cloud account or have not installed the IBM Cloud CLI, [click here](https://github.com/mofsal/containers101) to do so.
+So we have created our amazing database, we now want to push it to our private registry. In real agile development, a push to a private registry would trigger a build to run a test suite in a CI/CD pipeline. For this we will be using IBM Container Registry. If you have not created an IBM Cloud account or have not installed the IBM Cloud CLI, [click here](../../../) to follow the steps do so.
 
 First we will need to create a unique namespace for the registry:
 
