@@ -21,7 +21,7 @@ Make sure you replace `your-username` with a username that identfies you. If we 
 
 `docker images | grep mysql-server`
 
-Now we have an image that will contain a configured MySQL database with the credentials we setup in [exercise 3](https://github.com/mofsal/containers101/tree/master/3_Working_inside_containers), our schema in the containers /tmp directory and our schema loaded into MySQL with the updates we made to the `work` list items. Although it is unlikely we want to worry about setting up the database password, it would be nice to allow our database to work with different datasets. If we had several teams using this image, it would be great to use the same image and decouple the data from the application... Good news, we can!
+Now we have an image that will contain a configured MySQL database with the credentials we setup in [exercise 3](../3_Working_inside_containers), our schema in the containers /tmp directory and our schema loaded into MySQL with the updates we made to the `work` list items. Although it is unlikely we want to worry about setting up the database password, it would be nice to allow our database to work with different datasets. If we had several teams using this image, it would be great to use the same image and decouple the data from the application... Good news, we can!
 
 ## Mount a directory into a container
 
@@ -99,5 +99,5 @@ With some luck, todo should be there! We didn't have to run our schema. Let's no
 
 You should see that for ids 8 and 9, we have `Y` in the complete column.
 
-Congratulations! You now know how to mount volumes into a container to persist data and commit changes from a container to create a new image. Continue on to the [next exercise](https://github.com/mofsal/containers101/tree/master/5_Working_with_container_registry) to learn how to use the IBM container service.
+Congratulations! You now know how to mount volumes into a container to persist data and commit changes from a container to create a new image. Continue on to the [next exercise](../5_Working_with_container_registry) to learn how to use the IBM container service.
 
