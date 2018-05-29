@@ -24,6 +24,10 @@ So we have successfully created a MySQL database but we now want to get some dat
 
 `docker cp ./todo.sql mysql:/tmp`
 
+or 
+
+`docker cp C:\Users\...\todo.sql mysql:/tmp` if you're on Windows. (You will need to supply the full path to `todo.sql`)
+
 This will copy the SQL file to the /tmp directory within the container. 
 
 ## Make changes in a container
