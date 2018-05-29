@@ -17,12 +17,12 @@ Our starting point is from an ubuntu image. From there we add several layers to 
 
 ## Build your image
 
-To create an image from your Dockerfile run the following command:
+To create an image from your Dockerfile first open up the appropriate application. If running Docker-CE for Windows/Mac, ensure that Docker is running in your task bar and open up the `Terminal` application if on Mac or the `Command Prompt` application on Windows. Otherwise, if running Docker Toolbox on Windows, open up the `Docker QuickStart shell`. You will be using this shell environment for the duration of the workshop. To create the image, run:**:
 
 `docker build -t mynginx:latest .`
 
 The `-t` flag allows us to specify the image name followed by the image tag. By default, the image tag is always 'latest'.
-*Note: if you are not in your same directory as your Dockerfile make sure to replace the `.` with the Dockerfile path.*
+*Note: if you are not in your same directory as your Dockerfile make sure to replace the `.` with the path to the directory containing the Dockerfile.*
 
 ## Inspect image history
 
