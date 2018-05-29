@@ -8,9 +8,9 @@ Up until this point, you have only created a Docker image. You haven't actually 
 
 The `-d` flag tells Docker to run the container in the background and print the container Id. `-p` flag tells Docker that we will be exposing ports. The arguments supplied to `-p` tells Docker that we want to map the host port 8081 to the container port 80. If you wanted to use another port say if 8081 was being used by abother application, you would simply change the host port. (NOTE: We are only able to expose port 80 from within the container because we declared this behaviour in our Dockerfile with the command `EXPOSE 80`). The `--name` flag allows us to assign a name to our container as opposed to the random name and Id docker generates and we finally end with the image name to create the container from `mynginx`.
 
-The running nginx application will now be available at:
+The running nginx application will now be available on your local machine. Open a browser and navigate to:
 
-`localhost:8081`
+`http://localhost:8081`
 
 ## View containers
 
