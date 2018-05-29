@@ -15,21 +15,34 @@ Looking at the steps in the list, as a developer, we're really only interested i
 
 To create a snapshot from our container, we need to get it at a good starting point for re-use. As we have already loaded the schema into MySQL and made are changes, we are all set to commit changes from our running MySQL container:
 
-`docker commit mysql your-username/mysql-server`
+`docker commit mysql <username>/mysql-server`
 
-Make sure you replace `your-username` with a username that identfies you. If we now look through our docker images, we will see we have 2 mysql-server images:
+Make sure you replace `<username>` with a username that identfies you. If we now look through our docker images, we will see we have 2 mysql-server images:
 
 `docker images | grep mysql-server`
 
 Now we have an image that will contain a configured MySQL database with the credentials we setup in [exercise 3](../3_Working_inside_containers), our schema in the containers /tmp directory and our schema loaded into MySQL with the updates we made to the `work` list items. Although it is unlikely we want to worry about setting up the database password, it would be nice to allow our database to work with different datasets. If we had several teams using this image, it would be great to use the same image and decouple the data from the application... Good news, we can!
 
-## Mount a directory into a container
+## Mount persistent data into a container
 
-As developers, we want to have the flexibility to use different datasets - not just `todo.sql`. We would also like for the database files to be decoupled from the container. If the container was to die before we could run a commit, we would still lose changes we made after starting the container. Assuming the username you created was `bob`, start your custom `mysql-server` with two mounts:
+As developers, we want to have the flexibility to use different datasets - not just `todo.sql`. We would also like for the database files to be decoupled from the container. If the container was to die before we could run a commit, we would still lose changes we made after starting the container. There are numerous ways of doing this in Docker but in attempt to simplify the steps for both Windows and Linux/Mac users, we will create local data volumes.
 
-`docker run --name=mysql-persist -d -v /tmp/mysql:/var/lib/mysql -v /tmp/schema:/tmp/schema bob/mysql-server`
+Create two local data volumes with the following commands:
 
-We have now created a new container from our custom image of MySQL. This container is called `mysql-persist` and mounts `/tmp/mysql` from the host to the data directory for MySQL within the container. We also have an additional mount point at `/tmp/schema` to load in any other schema files to populate the database with.
+```
+docker volume create --name mysql-data --driver local
+docker volume create --name mysql-schema --driver local
+```
+
+To see these newly created volumes, we can run the command:
+
+`docker volume ls`
+
+Now we can run our custom MySQL container referencing these two data volumes:
+
+`docker run --name=mysql-persist -d -v mysql-data:/var/lib/mysql -v mysql-schema:/tmp/schema <username>/mysql-server`
+
+We have now created a new container from our custom image of MySQL. This container is called `mysql-persist` and mounts the  `mysql-data` volume on the host to the data directory for MySQL within the container. We also have an additional mount point at `mysql-schema` to load in any other schema files to populate the database with.
 
 ## Re-apply the database changes
 
@@ -71,19 +84,19 @@ We can now exit out of the MySQL and the container by running the command `exit`
 
 ## Test the persistence change
 
-Let's stop and remove all containers so we can be confident that we can start from a clean Docker environment and still use persisted data:
+Let's stop and remove all containers so we can be confident that we can start from a clean Docker environment and still use our persisted data in our local data volumes:
 
 `docker stop $(docker ps -aq)`
 
 This command stops all containers on the Docker host. The nested Docker command lists all the container on the host by Id. We can then remove all the containers:
 
-`docker rm -v $(docker ps -aq)`
+`docker rm $(docker ps -aq)`
 
-The `-v` flag ensures that the volumes associated with the containers will be removed also. Now we can run the same command is before to run the containers along with the volumes:
+Now we can run the same command as before to run the containers along with the volumes:
 
-`docker run --name=mysql-persist -d -v /tmp/mysql:/var/lib/mysql -v /tmp/schema:/tmp/schema bob/mysql-server`
+`docker run --name=mysql-persist -d -v mysql-data:/var/lib/mysql -v mysql-schema:/tmp/schema <username>/mysql-server`
 
-NOTE: As before, remember to change the username `bob` for your username. We can then login to MySQL:
+NOTE: As before, remember to replace the username `<username>` with the username you tagged the image with. We can then login to MySQL:
 
 `docker exec -it mysql-persist mysql -u root -p`
 
