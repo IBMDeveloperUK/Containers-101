@@ -34,4 +34,8 @@ If you can see the layers of the image being pushed up then you are successfully
 
 One of the nice things about Container Registry is that it will scan the image for vulnerabilites everytime an image is pushed to the registry or is updated. Let's click on the link under the `Policy Status` column for a summary of the security report. In addition to vulnerability scans, Container Registry shows us configuration issues that we should fix to better secure the container.
 
-Congratulations, you have completed the Containers 101 workshop!
+Congratulations, you have completed the Containers 101 workshop! You now know how the full Docker ecosystem works from creating a Docker image, creating a container, commiting a new image from a container and both pushing to and pulling from registries. You have also learnt how to work inside containers and control the lifecycle of container.
+
+## What now?
+
+The natural progression from containers is managing a multiple containers in a cluster. This level of thinking adds another level of abstraction on top of Docker with open source solutions such as Kubetnetes. Using your IBM Cloud account, feel free to check out the [IBM Cloud Kubernetes Service](https://console.bluemix.net/docs/containers/container_index.html#container_index) and the various tutorials to learn how you can start managing containers in a cluster.
