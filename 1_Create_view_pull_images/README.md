@@ -1,5 +1,7 @@
 # Exercise 1: Creating, pulling and running Docker images
 
+In this exercise, you will create your first Docker image and inspect the history of image to see the layers which create the image. Finally, you will learn how to pull other existing Docker images from DockerHub for usage within your local Docker environment.
+
 ## Create a Dockerfile
 
 Create a file called `Dockerfile` with the following contents:
@@ -40,7 +42,7 @@ To see the images you have installed on your machine run the following command:
 
 ## Pulling images
 
-You now know how to create a Docker image using a Dockerfile, but with exception of custom built software, you usually want to run images that you don't maintain. To pull ubuntu from the public docker regisrty on DockerHub, run the following command:
+You now know how to create a Docker image using a Dockerfile, but with exception of custom built software, you usually want to run images that you don't maintain. Docker Hub is a registry that provides a marketplace for Docker images for all to use. The [official images](https://hub.docker.com/explore/) for products in their Docker-ized format will be built by the maintainers and published here. To pull the official ubuntu image from DockerHub, run the following command:
 
 `docker pull ubuntu`
 
