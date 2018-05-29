@@ -14,7 +14,7 @@ If you can install Docker CE for Windows, then after you have installed Docker, 
 
 ## Registering for a free IBM Cloud Account
 
-1. If you don't have one already, sign up for a free IBM Cloud Account [here](https://ibm.biz/BdZfyY).
+1. If you don't have one already, sign up for a free IBM Cloud Account [here](https://ibm.biz/containers-101).
 
 2. Verify your account via the email the platform sends you.
 
