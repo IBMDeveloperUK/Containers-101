@@ -19,9 +19,10 @@ Our starting point is from an ubuntu image. From there we add several layers to 
 
 To create an image from your Dockerfile run the following command:
 
-`docker build -t mynginx:latest PATH_TO_DOCKERFILE`
+`docker build -t mynginx:latest .`
 
-The `-t` flag allows us to specify the image name followed by the image tag. By default, the image tag is always 'latest'
+The `-t` flag allows us to specify the image name followed by the image tag. By default, the image tag is always 'latest'.
+*Note: if you are not in your same directory as your Dockerfile make sure to replace the `.` with the Dockerfile path.*
 
 ## Inspect image history
 
