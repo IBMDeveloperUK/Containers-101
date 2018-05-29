@@ -45,4 +45,4 @@ You now know how to create a Docker image using a Dockerfile, but with exception
 
 As our custom built image for nginx was running on ubuntu, the docker engine will not actually pull any layers from DockerHub but will use the same layer it pulled when running the `mynginx` image. If you want to be double sure, you can run `docker history ubuntu` and you should see all the same commands and layer sizes as the base layers for `mynginx`.
 
-Congratulations, you now know how to create a Docker image from a Dockerfile, view the history of a Docker image and how to pull images from the Docker registry! Continue on to the [next exercise](https://github.com/mofsal/containers101/tree/master/2_Create_view_stop_containers) to learn how to start working with containers.
+Congratulations, you now know how to create a Docker image from a Dockerfile, view the history of a Docker image and how to pull images from the Docker registry! Continue on to the [next exercise](../2_Create_view_stop_containers) to learn how to start working with containers.
