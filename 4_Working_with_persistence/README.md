@@ -40,7 +40,12 @@ To see these newly created volumes, we can run the command:
 
 Now we can run our custom MySQL container referencing these two data volumes:
 
-`docker run --name=mysql-persist -d -v mysql-data:/var/lib/mysql -v mysql-schema:/tmp/schema <username>/mysql-server`
+```
+docker run --name=mysql-persist -d \
+    -v mysql-data:/var/lib/mysql \
+    -v mysql-schema:/tmp/schema \
+    <username>/mysql-server
+```
 
 We have now created a new container from our custom image of MySQL. This container is called `mysql-persist` and mounts the  `mysql-data` volume on the host to the data directory for MySQL within the container. We also have an additional mount point at `mysql-schema` to load in any other schema files to populate the database with.
 
@@ -94,7 +99,12 @@ This command stops all containers on the Docker host. The nested Docker command 
 
 Now we can run the same command as before to run the containers along with the volumes:
 
-`docker run --name=mysql-persist -d -v mysql-data:/var/lib/mysql -v mysql-schema:/tmp/schema <username>/mysql-server`
+```
+docker run --name=mysql-persist -d \
+    -v mysql-data:/var/lib/mysql \
+    -v mysql-schema:/tmp/schema \
+    <username>/mysql-server
+```
 
 NOTE: As before, remember to replace the username `<username>` with the username you tagged the image with. We can then login to MySQL:
 
