@@ -24,7 +24,7 @@ This command shows you all running containers running on your machine. The conta
 
 To safely stop our custom nginx container, you can run the following command:
 
-`docker stop mynginx`
+`docker stop webserver`
 
 If you run the `docker ps` command, you will notice that we no longer see any information about our container. Remember that the default behaviour for this command is to show *running* containers (NOTE: You could also use the unique Id as a reference to the container). To see all containers on your machine run:
 
@@ -36,7 +36,7 @@ You should now see that the container is in the view but is now in the `Exited` 
 
 To start our nginx container again, you can run the following command:
 
-`docker start mynginx`
+`docker start webserver`
 
 As before the application will be available at `localhost:8081`.
 
