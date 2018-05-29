@@ -14,7 +14,7 @@ The running nginx application will now be available on your local machine. Open 
 
 ## View containers
 
-Although we know what our webserver container should now be running, it's always nice to see what state our containers are in especially when we have multiple containers running over extended periods of time. To see the state of all your containers, run the following command:
+Although we know that our webserver container should now be running, it's always nice to see what state our containers are in especially when we have multiple containers running over extended periods of time. To see the state of all your containers, run the following command:
 
 `docker ps`
 
