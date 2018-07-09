@@ -19,7 +19,7 @@ Our starting point is from an ubuntu image. From there we add several layers to 
 
 ## Build your image
 
-To create an image from your Dockerfile first open up the appropriate application. If running Docker-CE for Windows/Mac, ensure that Docker is running in your task bar and open up the `Terminal` application if on Mac or the `Command Prompt` application on Windows. Otherwise, if running Docker Toolbox on Windows, open up the `Docker QuickStart shell`. You will be using this shell environment for the duration of the workshop. To create the image, run:**:
+To create an image from your Dockerfile first open up the appropriate application. If running Docker-CE for Windows/Mac, ensure that Docker is running in your task bar and open up the `Terminal` application if on Mac or the `Command Prompt` application on Windows. Otherwise, if running Docker Toolbox on Windows, open up the `Docker QuickStart shell`. You will be using this shell environment for the duration of the workshop. To create the image, run:
 
 `docker build -t mynginx:latest .`
 
