@@ -26,11 +26,17 @@ Docker CE is only compatible with Microsoft Windows 10 Professional or Enterpris
 
 For the last part of the workshop, we will be using IBM Container Registry. To run this part of the workshop, you will need to install the IBM Cloud coomand line tool (CLI) and then configure it to use Container Registry:
 
-1. Go to [this docs link](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started) and follow the short instructions to download and install the CLI.
+1. Go to [this docs link](https://cloud.ibm.com/docs/home/tools) and follow the short instructions to download and install the CLI.
 
-2. Install the Container Registry plug-in:
+2. Install the Container Registry plug-in. 
 
-`bx plugin install container-registry -r Bluemix`
+On Mac or Linux run:
+
+`curl -sL http://ibm.biz/idt-installer | bash`
+
+Or on Windows run:
+
+`Set-ExecutionPolicy Unrestricted; iex(New-Object Net.WebClient).DownloadString('http://ibm.biz/idt-win-installer')`
 
 ## Hands-on workshop
 
