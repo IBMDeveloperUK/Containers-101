@@ -1,6 +1,6 @@
 # Containers 101
 
-Welcome to the Containers 101 workshop! 
+Welcome to the Containers 101 workshop!
 
 ## Install Docker
 
@@ -12,11 +12,11 @@ Once you have installed Docker, you will need to ensure that you [switch to Linu
 
 ### Considerations for Windows 7/8 users
 
-Docker CE is only compatible with Microsoft Windows 10 Professional or Enterprise 64-bit. For people running other versions of Windows, you will need to install [Docker Toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/) 
+Docker CE is only compatible with Microsoft Windows 10 Professional or Enterprise 64-bit. For people running other versions of Windows, you will need to install [Docker Toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/)
 
 ## Registering for a free IBM Cloud Account
 
-1. If you don't have one already, sign up for a free IBM Cloud Account [here](https://ibm.biz/containers-101).
+1. If you don't have one already, sign up for a free IBM Cloud Account [here](https://ibm.biz/BdzgtG).
 
 2. Verify your account via the email the platform sends you.
 
@@ -28,7 +28,7 @@ For the last part of the workshop, we will be using IBM Container Registry. To r
 
 1. Go to [this docs link](https://cloud.ibm.com/docs/home/tools) and follow the short instructions to download and install the CLI.
 
-2. Install the Container Registry plug-in. 
+2. Install the Container Registry plug-in.
 
 On Mac or Linux run:
 
